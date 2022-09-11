@@ -11,3 +11,7 @@ function colorName2Value(colorName) {
   const defaultColor=CalendarApp.EventColor.BLUE;
   return COLORS.find(COLOR=>COLOR.colorName===colorName)?.colorValue || defaultColor;
 }
+
+function colorValue2Name(colorValue) {
+  return COLORS.find(COLOR=>COLOR.colorValue===colorValue)?.colorName || '';
+}

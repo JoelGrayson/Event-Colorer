@@ -63,7 +63,7 @@ function createCard(parameters={title: '', color: DEFAULT_COLOR_NAME /* colorNam
 
   const text=CardService.newTextParagraph();
   if (!title)
-    text.setText('Select a color and type an event name above.');
+    text.setText('Type an event name above and select a color<br>or click on an event in your calendar.');
   else {
     if (!color)
       text.setText('Please select a color above');

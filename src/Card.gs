@@ -80,17 +80,17 @@ function createCard(parameters={title: '', color: DEFAULT_COLOR_NAME /* colorNam
     );
   section.addWidget(submitBtn);
 
-  // let footer=CardService.newFixedFooter()
-  //   .setPrimaryButton(
-  //     CardService.newTextButton()
-  //     .setText("Learn more about Event Colorer")
-  //     .setOpenLink(CardService.newOpenLink()
-  //         .setUrl("https://www.joelgrayson.com/event-colorer"))
-  //   );
+  const footer=CardService.newFixedFooter()
+    .setPrimaryButton(
+      CardService.newTextButton()
+      .setText("Event Colorer")
+      .setOpenLink(CardService.newOpenLink()
+          .setUrl("https://www.joelgrayson.com/event-colorer"))
+    );
   
-  let card=CardService.newCardBuilder()
+  const card=CardService.newCardBuilder()
     .addSection(section)
-    // .setFixedFooter(footer)
+    .setFixedFooter(footer)
 
   return card.build();
 }

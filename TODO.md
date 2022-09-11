@@ -1,5 +1,6 @@
 - [x] Add more colors
 - [x] Reactive design
 - [x] On event clicked, fill in that event's title and color
+- [x] Footer
 - [ ] Better GUI
 - [ ] Publish to the marketplace

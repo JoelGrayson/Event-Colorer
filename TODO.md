@@ -1,4 +1,5 @@
-- [ ] Add more colors
+- [x] Add more colors
+- [x] Reactive design
 - [ ] On event clicked, use that title
 - [ ] Better GUI
 - [ ] Publish to the marketplace

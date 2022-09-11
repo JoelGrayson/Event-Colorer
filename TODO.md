@@ -3,4 +3,5 @@
 - [x] On event clicked, fill in that event's title and color
 - [x] Footer
 - [ ] Better GUI
+- [ ] Demo tutorial
 - [ ] Publish to the marketplace

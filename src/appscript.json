@@ -12,7 +12,7 @@
     "addOns": {
         "common": {
             "name": "Event Colorer",
-            "logoUrl": "https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-fill-color-icon.png",
+            "logoUrl": "https://w.joelgrayson.com/images/event-colorer/logo.png",
             "useLocaleFromApp": true,
             "homepageTrigger": {
                 "runFunction": "onHomePage",

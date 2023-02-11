@@ -14,17 +14,10 @@ const COLORS=[
     { labelName: 'Gray ⚪',   colorName: 'gray',   hexColor: '#616161', colorValue: CalendarApp.EventColor.GRAY },
   
     // Extra colors
-    { labelName: 'Light Blue',colorName: 'pale blue', hexColor: '#7986CB', colorValue: CalendarApp.EventColor.PALE_BLUE,  isExtra: true},
-    { labelName: 'Light Red', colorName: 'light red', hexColor: '#E67C73', colorValue: CalendarApp.EventColor.PALE_RED,   isExtra: true},
-    { labelName: 'UN Blue 🇺🇳',colorName: 'un blue',   hexColor: '#039BE5', colorValue: CalendarApp.EventColor.CYAN,       isExtra: true},
-    { labelName: 'Mint',      colorName: 'mint',      hexColor: '#33B679', colorValue: CalendarApp.EventColor.PALE_GREEN, isExtra: true}
+    { labelName: 'Light Blue',colorName: 'pale blue', hexColor: '#7986CB', colorValue: CalendarApp.EventColor.PALE_BLUE  },
+    { labelName: 'Light Red', colorName: 'light red', hexColor: '#E67C73', colorValue: CalendarApp.EventColor.PALE_RED   },
+    { labelName: 'UN Blue 🇺🇳',colorName: 'un blue',   hexColor: '#039BE5', colorValue: CalendarApp.EventColor.CYAN       },
+    { labelName: 'Mint',      colorName: 'mint',      hexColor: '#33B679', colorValue: CalendarApp.EventColor.PALE_GREEN }
 ];
 
 const DEFAULT_COLOR_NAME='red';
-const DEFAULT_PAST_BOUND=new Date();
-const DEFAULT_FUTURE_BOUND=(()=>{ //one month aheda
-    let temp=new Date();
-    temp.setMonth(temp.getMonth());
-    return temp;
-})();
-  

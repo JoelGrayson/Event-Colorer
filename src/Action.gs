@@ -1,13 +1,12 @@
-function getTargetEvents(targetTitle, calendarId, pastBound, futureBound) {
+function getTargetEvents(targetTitle, calendarId) {
     const calendar=CalendarApp.getCalendarById(calendarId);
     if (!calendar) return [];
-    
-    if (pastBound==='forever' && futureBound!=='forever')
-        return calendar.getEvents(new Date('2011'), futureBound, { search: targetTitle }).filter(e=>equalStrings(e.getTitle(), targetTitle));
-    else if (pastBound!=='forever' && futureBound==='forever')
-        return calendar.getEvents(pastBound, new Date('9999'), { search: targetTitle }).filter(e=>equalStrings(e.getTitle(), targetTitle));
-    else
-        return calendar.getEvents(pastBound, futureBound, { search: targetTitle }).filter(e=>equalStrings(e.getTitle(), targetTitle));
+    const pastBound=new Date();
+    pastBound.setFullYear(pastBound.getFullYear()-1);
+    const futureBound=new Date();
+    futureBound.setFullYear(futureBound.getFullYear()+1);
+    return calendar.getEvents(pastBound, futureBound, { search: targetTitle })
+        .filter(e=>equalStrings(e.getTitle(), targetTitle));
 }
   
 function changeEventColors(targetEvents, targetColor) {

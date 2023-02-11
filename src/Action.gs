@@ -1,18 +1,18 @@
-function getTargetEvents(targetTitle) {
-  const now=new Date();
-  const yearFromNow=new Date();
-  yearFromNow.setUTCFullYear(now.getUTCFullYear()+1);
-
-  const allEvents=CalendarApp.getEvents(now, yearFromNow);
-  const targetEvents=[];
-
-  for (let event of allEvents)
-    if (equalStrings(event.getTitle(), targetTitle))
-      targetEvents.push(event);
+function getTargetEvents(targetTitle, calendarId, pastBound, futureBound) {
+    const calendar=CalendarApp.getCalendarById(calendarId);
+    if (!calendar) return [];
+    
+    if (pastBound==='forever' && futureBound!=='forever')
+        return calendar.getEvents(new Date('2011'), futureBound, { search: targetTitle }).filter(e=>equalStrings(e.getTitle(), targetTitle));
+    else if (pastBound!=='forever' && futureBound==='forever')
+        return calendar.getEvents(pastBound, new Date('9999'), { search: targetTitle }).filter(e=>equalStrings(e.getTitle(), targetTitle));
+    else
+        return calendar.getEvents(pastBound, futureBound, { search: targetTitle }).filter(e=>equalStrings(e.getTitle(), targetTitle));
+}
   
-  return targetEvents;
-}
-
 function changeEventColors(targetEvents, targetColor) {
-  targetEvents.forEach(event=>event.setColor(targetColor));
+    targetEvents.forEach(event=>event.setColor(targetColor));
 }
+  
+function runNoneForDebugger() {}
+  

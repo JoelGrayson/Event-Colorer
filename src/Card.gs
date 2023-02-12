@@ -51,9 +51,13 @@ function createCard(parameters={
         section.addWidget(CardService.newTextParagraph().setText('Please select a color above.'));
     } else { //Run button
         section.addWidget(
+            CardService.newTextParagraph()
+                .setText(`Change all events titled "${title}" (${numMatches} matches) to <font color="${colorName2Hex(color)}">${color}</font>?`)
+        );
+        section.addWidget(
             CardService.newTextButton()
-                .setText(`Change all events titled "${title}" (${numMatches} matches) to <font color="${colorName2Hex(color)}">${color}</font>.`)
-                .setBackgroundColor('#f9c44d')
+                .setText('Run')
+                .setBackgroundColor(colorName2Hex(color))
                 .setTextButtonStyle(CardService.TextButtonStyle.FILLED)
                 .setOnClickAction(CardService.newAction()
                     .setFunctionName('execColorChange')

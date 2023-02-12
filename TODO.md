@@ -1,7 +1,2 @@
-- [x] Add more colors
-- [x] Reactive design
-- [x] On event clicked, fill in that event's title and color
-- [x] Footer
-- [ ] Better GUI
-- [ ] Demo tutorial
+- [ ] Record tutorial and attach link in extension
 - [ ] Publish to the marketplace

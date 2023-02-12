@@ -4,7 +4,7 @@
 </div>
 <br>
 
-Change all events of a title to a color.
+Colorize your calendar by changing all events of a specific title to a color.
 
 Watch demo video here: https://youtu.be/ONW3zxBkW1M
 
